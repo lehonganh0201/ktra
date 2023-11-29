@@ -14,6 +14,9 @@ public class Bai1 {
                     cnt1++;
                 }
                 else {
+                    if(cnt1==0){
+                        return false;
+                    }
                     cnt1--;
                 }
             }
@@ -22,6 +25,9 @@ public class Bai1 {
                     cnt2++;
                 }
                 else {
+                    if(cnt2==0){
+                        return false;
+                    }
                     cnt2--;
                 }
             }
@@ -30,6 +36,9 @@ public class Bai1 {
                     cnt3++;
                 }
                 else {
+                    if(cnt3==0){
+                        return false;
+                    }
                     cnt3--;
                 }
             }
