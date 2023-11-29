@@ -8,24 +8,33 @@ public class Bai1 {
             return false;
         }
         int cnt1=0,cnt2=0,cnt3=0;
-        for(char c:str.toCharArray()){
-            if(c=='('||c==')'){
-                if(c=='('){
+        for(int i=0;i<str.length();i++){
+            if(str.charAt(i)=='('||str.charAt(i)==')'){
+                if(str.charAt(i)=='('){
                     cnt1++;
                 }
-                else cnt1--;
+                else {
+                    cnt1--;
+                }
             }
-            else if(c=='['||c==']'){
-                if(c=='['){
+            else if(str.charAt(i)=='['||str.charAt(i)==']'){
+                if(str.charAt(i)=='['){
                     cnt2++;
                 }
-                else cnt2--;
+                else {
+                    cnt2--;
+                }
             }
-            else if (c=='{'||c=='}'){
-                if(c=='{'){
+            else if (str.charAt(i)=='{'||str.charAt(i)=='}'){
+                if(str.charAt(i)=='{'){
                     cnt3++;
                 }
-                else cnt3--;
+                else {
+                    cnt3--;
+                }
+            }
+            if(cnt1>1||cnt1<0||cnt2>1||cnt2<0||cnt3>1||cnt3<0){
+                return false;
             }
         }
         if(cnt1==0 && cnt2 ==0 && cnt3==0){
